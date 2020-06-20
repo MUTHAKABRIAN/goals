@@ -12,9 +12,9 @@ export class GoalFormComponent implements OnInit {
   @Output() addGoal = new EventEmitter<Goal>();
 
   submitGoal(){
-    this.addGoal=new EventEmitter<Goal>();
+    this.addGoal.emit(this.newGoal);
   }
-  
+
   constructor() { }
 
   ngOnInit(){
